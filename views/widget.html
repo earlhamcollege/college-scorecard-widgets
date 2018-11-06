@@ -1,0 +1,124 @@
+{% set school = data.data.results[0].school %}
+{% set latest = data.data.results[0].latest %}
+{% set results = data.data.results[0] %}
+
+<h1>{{ school.name }}</h1>
+<h4>Source: {{ latest.year }}</h4>
+{{data.data.results[0].school | json}}
+
+<div class="school-card_container-school" data-school-id="{{results.id}}" data-compare="false">
+
+
+            <div class="school-heading">
+
+              <div class="investigation-major-wrapper" data-bind="under_investigation" aria-hidden="true">
+                <a>
+                  <p class="investigation-major" aria-describedby="tip-hcm2" data-bind="branch_campus" data-definition="default">
+                    Under Ed Monitoring <i class="tooltip-target fa fa-info-circle"></i>
+                  </p>
+                </a>
+              </div>
+
+              <div class="compare-wrapper">
+
+                <h1 data-bind="name">Earlham College</h1>
+
+                <div class="compare-school">
+                  <button type="button" class="button button-compare_schools" data-bind="selected_school" aria-label="Add to Compare" data-school="compare-schools" aria-pressed="" data-school-id="150455" data-school-name="Earlham College" aria-describedby="tip-compare-add">
+    <i class="fa fa-star tooltip-target"></i>
+    <span class="sr-only">Add to Compare</span>
+</button>
+                </div>
+
+              </div>
+
+              <h2 class="location">
+                <span data-bind="city">Richmond</span>,
+                <span data-bind="state">IN</span>
+              </h2>
+
+              <h2 class="population">
+                <span data-bind="size_number">994</span> undergraduate students
+              </h2>
+
+              <h2 class="school-url">
+                <span data-bind="">
+                  <a data-bind="school_link" target="_blank" href="http://www.earlham.edu">earlham.edu</a>
+                </span>
+              </h2>
+
+              <ul class="school-key_figures key-figures">
+                <li data-bind="years" class="n-year">
+                  <span data-bind="award_level" data-definition="">
+                    <span data-bind="number" class="school-key_figures-year">4</span>
+                    <span class="label">Year</span>
+                    <span class="tooltip-target u-new_line"></span>
+                  </span>
+                </li>
+                <li data-bind="control" class="icon-private">
+                  <span data-bind="value">Private</span>
+                </li>
+                <li data-bind="locale_name" class="icon-town">
+                  <span data-bind="value">Town</span>
+                </li>
+                <li data-bind="size_category" class="icon-small">
+                  <span data-bind="value">Small</span>
+                </li>
+              </ul>
+
+              <ul class="school-special_designation" data-bind="special_designations">
+                <li class="special">Friends</li>
+              </ul>
+
+            </div>
+
+            <div class="school-map leaflet-container leaflet-retina leaflet-fade-anim" data-bind="map" tabindex="0" style="position: relative;">
+            <div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/10/270/387.png" style="height: 256px; width: 256px; left: 44px; top: -199px;" alt="Map tile image"><img class="leaflet-tile leaflet-tile-loaded" src="https://stamen-tiles-b.a.ssl.fastly.net/toner-lite/10/270/388.png" style="height: 256px; width: 256px; left: 44px; top: 57px;" alt="Map tile image"><img class="leaflet-tile leaflet-tile-loaded" src="https://stamen-tiles-c.a.ssl.fastly.net/toner-lite/10/269/387.png" style="height: 256px; width: 256px; left: -212px; top: -199px;" alt="Map tile image"><img class="leaflet-tile leaflet-tile-loaded" src="https://stamen-tiles-b.a.ssl.fastly.net/toner-lite/10/271/387.png" style="height: 256px; width: 256px; left: 300px; top: -199px;" alt="Map tile image"><img class="leaflet-tile leaflet-tile-loaded" src="https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/10/269/388.png" style="height: 256px; width: 256px; left: -212px; top: 57px;" alt="Map tile image"><img class="leaflet-tile leaflet-tile-loaded" src="https://stamen-tiles-c.a.ssl.fastly.net/toner-lite/10/271/388.png" style="height: 256px; width: 256px; left: 300px; top: 57px;" alt="Map tile image"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="513" height="439" viewBox="-94 -80 513 439" style="transform: translate3d(-94px, -80px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" stroke="black" stroke-opacity="1" stroke-width="5" fill="white" fill-opacity="1" class="leaflet-clickable" d="M163,129A10,10,0,1,1,162.9,129 z"></path></g></svg></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-attribution leaflet-control">Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.<br>Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.</div></div><div class="leaflet-bottom leaflet-right"></div></div></div>
+
+            <div class="school-meters">
+
+              <figure class="meter below_is_good">
+                <h2 class="figure-heading constrain_width" aria-describedby="tip-avg-cost-year" tabindex="0">
+                  Average<br>Annual Cost
+                  <span class="tooltip-target u-new_line">
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                </h2>
+                <picc-meter class="cost" data-bind="average_cost_meter" max="100000" value="21066" degree="3">
+                <div class="picc-meter-bar" style="height: 21.1%;"></div></picc-meter>
+                <figcaption>
+                  <span data-bind="average_cost">$21,066</span>
+                </figcaption>
+              </figure>
+
+              <figure class="meter above_is_good">
+                <h2 class="figure-heading constrain_width" aria-describedby="tip-graduation-rate" tabindex="0">
+                  Graduation<br>Rate
+                  <span class="tooltip-target u-new_line">
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                </h2>
+                <picc-meter class="graduation" data-bind="grad_rate_meter" max="1" value="0.6906" degree="3">
+                <div class="picc-meter-bar" style="height: 69.1%;"></div></picc-meter>
+                <figcaption>
+                  <span data-bind="grad_rate">69%</span>
+                </figcaption>
+              </figure>
+
+              <figure class="meter above_is_good">
+                <h2 class="figure-heading constrain_width" aria-describedby="tip-avg-salary" tabindex="0" data-bind="branch_campus" data-definition="default">
+                  Salary After<br>Attending
+                  <span class="tooltip-target u-new_line">
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                </h2>
+                <picc-meter class="earnings" data-bind="average_salary_meter" max="100000" value="35000" degree="3">
+                <div class="picc-meter-bar" style="height: 35%;"></div></picc-meter>
+                <figcaption>
+                  <span data-bind="average_salary">$35,000</span>
+                </figcaption>
+              </figure>
+
+            </div>
+
+          </div>
