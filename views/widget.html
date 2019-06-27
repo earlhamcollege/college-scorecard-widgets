@@ -4,15 +4,12 @@
 
 <h1>{{ school.name }}</h1>
 <h4>Source: {{ latest.year }}</h4>
-{{data.data.results[0].school | json}}
+{{data.data.results[0] | json}}
 
 <div class="school-card_container-school" data-school-id="{{results.id}}" data-compare="false">
-
-
-            <div class="school-heading">
-
-              <div class="investigation-major-wrapper" data-bind="under_investigation" aria-hidden="true">
-                <a>
+  <div class="school-heading">
+    <div class="investigation-major-wrapper" data-bind="under_investigation" aria-hidden="true">
+    <a>
                   <p class="investigation-major" aria-describedby="tip-hcm2" data-bind="branch_campus" data-definition="default">
                     Under Ed Monitoring <i class="tooltip-target fa fa-info-circle"></i>
                   </p>

@@ -19,8 +19,11 @@ module.exports = {
   construct: function (self, options) {
     self.template = "placeholder";
     var widgetOptions = {};
+    
+
     self.route('get', 'collegescorecard', function (req, res) {
-      var url = 'https://api.data.gov/ed/collegescorecard/v1/schools?api_key='+req.query.api_key+'&school.name='+req.query.school
+      var apikey = options.api_key || req.query.api_key || [];
+      var url = 'https://api.data.gov/ed/collegescorecard/v1/schools?api_key='+apikey+'&school.name='+req.query.school
       return self.getData(url, function (err, results) {
       	
         if (err) {
